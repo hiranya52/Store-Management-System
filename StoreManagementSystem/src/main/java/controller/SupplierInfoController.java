@@ -113,7 +113,6 @@ public class SupplierInfoController implements Initializable {
         txtPhone.setText("");
         txtEmail.setText("");
 
-
     }
 
     @FXML
@@ -131,6 +130,23 @@ public class SupplierInfoController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        SupplierInfoDTO selectedSupplier = tblSupplierInfo.getSelectionModel().getSelectedItem();
+
+        if (selectedSupplier != null){
+            supplierInfoDTOS.remove(selectedSupplier);
+            tblSupplierInfo.refresh();
+
+            txtSupplierID.setText("");
+            txtName.setText("");
+            txtCompanyName.setText("");
+            txtAddress.setText("");
+            txtCity.setText("");
+            txtProvince.setText("");
+            txtPostalCode.setText("");
+            txtPhone.setText("");
+            txtEmail.setText("");
+
+        }
 
     }
 
