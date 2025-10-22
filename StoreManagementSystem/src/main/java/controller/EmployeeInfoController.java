@@ -94,7 +94,32 @@ public class EmployeeInfoController implements Initializable {
 
     @FXML
     void btnAddOnAction(ActionEvent event) {
+        String employeeID = txtEmployeeID.getText();
+        String name = txtName.getText();
+        String nic = txtNIC.getText();
+        String dob = txtDOB.getText();
+        String position = txtPosition.getText();
+        double salary = Double.parseDouble(txtSalary.getText());
+        String contactNumber = txtContactNumber.getText();
+        String address = txtAddress.getText();
+        String joinedDate = txtJoinedDate.getText();
+        String status = txtStatus.getText();
 
+        EmployeeInfoDTO employeeInfoDTO = new EmployeeInfoDTO(employeeID, name, nic, dob, position, salary, contactNumber, address, joinedDate, status2);
+
+        employeeInfoDTOS.add(employeeInfoDTO);
+        tblEmployeeInfo.refresh();
+
+        txtEmployeeID.setText("");
+        txtName.setText("");
+        txtNIC.setText("");
+        txtDOB.setText("");
+        txtPosition.setText("");
+        txtSalary.setText("");
+        txtContactNumber.setText("");
+        txtAddress.setText("");
+        txtJoinedDate.setText("");
+        txtStatus.setText("");
     }
 
     @FXML
