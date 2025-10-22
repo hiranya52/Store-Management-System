@@ -93,6 +93,20 @@ public class ItemInfoController implements Initializable {
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
 
+        ItemInfoDTO selectedItem = tblItemInfo.getSelectionModel().getSelectedItem();
+
+        if (selectedItem != null){
+            itemInfoDTOS.remove(selectedItem);
+            tblItemInfo.refresh();
+
+            txtItemCode.setText("");
+            txtDescription.setText("");
+            txtCategory.setText("");
+            txtQtyOnHand.setText("");
+            txtUnitPrice.setText("");
+
+        }
+
     }
 
     @FXML
