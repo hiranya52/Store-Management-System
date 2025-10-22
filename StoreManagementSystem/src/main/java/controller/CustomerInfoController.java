@@ -135,6 +135,30 @@ public class CustomerInfoController implements Initializable {
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
 
+        CustomerInfoDTO selectedCustomer = tblCustomerInfo.getSelectionModel().getSelectedItem();
+
+        selectedCustomer.setCusID(txtCustomerID.getText());
+        selectedCustomer.setTitle(txtTitle.getText());
+        selectedCustomer.setName(txtName.getText());
+        selectedCustomer.setDob(txtDOB.getText());
+        selectedCustomer.setSalary(Double.valueOf(txtSalary.getText()));
+        selectedCustomer.setAddress(txtAddress.getText());
+        selectedCustomer.setCity(txtCity.getText());
+        selectedCustomer.setProvince(txtProvince.getText());
+        selectedCustomer.setPostalCode(txtPostalCode.getText());
+
+        tblCustomerInfo.refresh();
+
+        txtCustomerID.setText("");
+        txtTitle.setText("");
+        txtName.setText("");
+        txtDOB.setText("");
+        txtSalary.setText("");
+        txtAddress.setText("");
+        txtCity.setText("");
+        txtProvince.setText("");
+        txtPostalCode.setText("");
+
     }
 
     @Override
