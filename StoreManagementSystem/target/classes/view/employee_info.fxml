@@ -36,49 +36,49 @@
             <Font name="Arial Bold" size="34.0" />
          </font>
       </Label>
-      <TextField layoutX="39.0" layoutY="171.0" prefHeight="35.0" prefWidth="220.0" promptText="Employee ID" />
-      <TextField layoutX="288.0" layoutY="170.0" prefHeight="35.0" prefWidth="220.0" promptText="Name" />
-      <TextField layoutX="540.0" layoutY="168.0" prefHeight="35.0" prefWidth="220.0" promptText="NIC" />
-      <TextField layoutX="789.0" layoutY="170.0" prefHeight="35.0" prefWidth="220.0" promptText="DOB" />
-      <TextField layoutX="1038.0" layoutY="169.0" prefHeight="35.0" prefWidth="220.0" promptText="Position" />
-      <TextField layoutX="39.0" layoutY="227.0" prefHeight="35.0" prefWidth="220.0" promptText="Salary" />
-      <TextField layoutX="288.0" layoutY="226.0" prefHeight="35.0" prefWidth="220.0" promptText="Contact Number" />
-      <TextField layoutX="540.0" layoutY="224.0" prefHeight="35.0" prefWidth="220.0" promptText="Address" />
-      <TextField layoutX="789.0" layoutY="226.0" prefHeight="35.0" prefWidth="220.0" promptText="Joined Date" />
-      <Button layoutX="378.0" layoutY="301.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #321d12;" text="Add" textFill="WHITE">
+      <TextField fx:id="txtEmployeeID" layoutX="39.0" layoutY="171.0" prefHeight="35.0" prefWidth="220.0" promptText="Employee ID" />
+      <TextField fx:id="txtName" layoutX="288.0" layoutY="170.0" prefHeight="35.0" prefWidth="220.0" promptText="Name" />
+      <TextField fx:id="txtNIC" layoutX="540.0" layoutY="168.0" prefHeight="35.0" prefWidth="220.0" promptText="NIC" />
+      <TextField fx:id="txtDOB" layoutX="789.0" layoutY="170.0" prefHeight="35.0" prefWidth="220.0" promptText="DOB" />
+      <TextField fx:id="txtPosition" layoutX="1038.0" layoutY="169.0" prefHeight="35.0" prefWidth="220.0" promptText="Position" />
+      <TextField fx:id="txtSalary" layoutX="39.0" layoutY="227.0" prefHeight="35.0" prefWidth="220.0" promptText="Salary" />
+      <TextField fx:id="txtContactNumber" layoutX="288.0" layoutY="226.0" prefHeight="35.0" prefWidth="220.0" promptText="Contact Number" />
+      <TextField fx:id="txtAddress" layoutX="540.0" layoutY="224.0" prefHeight="35.0" prefWidth="220.0" promptText="Address" />
+      <TextField fx:id="txtJoinedDate" layoutX="789.0" layoutY="226.0" prefHeight="35.0" prefWidth="220.0" promptText="Joined Date" />
+      <Button layoutX="378.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #321d12;" text="Add" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="518.0" layoutY="301.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Update" textFill="#321d12">
+      <Button layoutX="518.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Update" textFill="#321d12">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="659.0" layoutY="301.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Delete" textFill="#321d12">
+      <Button layoutX="659.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Delete" textFill="#321d12">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="799.0" layoutY="301.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Clear" textFill="#321d12">
+      <Button layoutX="799.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Clear" textFill="#321d12">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Button>
-      <TableView layoutX="33.0" layoutY="382.0" prefHeight="401.0" prefWidth="1236.0">
+      <TableView fx:id="tblEmployeeInfo" layoutX="33.0" layoutY="382.0" prefHeight="401.0" prefWidth="1236.0">
          <columns>
-            <TableColumn prefWidth="75.0" text="Employee ID" />
-            <TableColumn prefWidth="160.00910186767578" text="Name" />
-            <TableColumn prefWidth="129.99090576171875" text="NIC" />
-            <TableColumn prefWidth="86.763916015625" text="DOB" />
-            <TableColumn prefWidth="123.49090576171875" text="Position" />
-            <TableColumn prefWidth="124.1563720703125" text="Salary" />
-            <TableColumn prefWidth="132.693359375" text="Contact Number" />
-            <TableColumn prefWidth="197.15643310546875" text="Address" />
-            <TableColumn prefWidth="100.4847412109375" text="Joined Date" />
-            <TableColumn prefWidth="108.29180908203125" text="Status" />
+            <TableColumn fx:id="colEmployeeID" prefWidth="75.0" text="Employee ID" />
+            <TableColumn fx:id="colName" prefWidth="160.00910186767578" text="Name" />
+            <TableColumn fx:id="colNIC" prefWidth="129.99090576171875" text="NIC" />
+            <TableColumn fx:id="colDOB" prefWidth="86.763916015625" text="DOB" />
+            <TableColumn fx:id="colPosition" prefWidth="123.49090576171875" text="Position" />
+            <TableColumn fx:id="colSalary" prefWidth="124.1563720703125" text="Salary" />
+            <TableColumn fx:id="colContactNumber" prefWidth="132.693359375" text="Contact Number" />
+            <TableColumn fx:id="colAddress" prefWidth="197.15643310546875" text="Address" />
+            <TableColumn fx:id="colJoinedDate" prefWidth="100.4847412109375" text="Joined Date" />
+            <TableColumn fx:id="colStatus" prefWidth="108.29180908203125" text="Status" />
          </columns>
       </TableView>
-      <TextField layoutX="1039.0" layoutY="226.0" prefHeight="35.0" prefWidth="220.0" promptText="Status" />
+      <TextField fx:id="txtStatus" layoutX="1039.0" layoutY="226.0" prefHeight="35.0" prefWidth="220.0" promptText="Status" />
    </children>
 </AnchorPane>
