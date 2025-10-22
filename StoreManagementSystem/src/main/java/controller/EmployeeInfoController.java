@@ -105,7 +105,7 @@ public class EmployeeInfoController implements Initializable {
         String joinedDate = txtJoinedDate.getText();
         String status = txtStatus.getText();
 
-        EmployeeInfoDTO employeeInfoDTO = new EmployeeInfoDTO(employeeID, name, nic, dob, position, salary, contactNumber, address, joinedDate, status2);
+        EmployeeInfoDTO employeeInfoDTO = new EmployeeInfoDTO(employeeID, name, nic, dob, position, salary, contactNumber, address, joinedDate, status);
 
         employeeInfoDTOS.add(employeeInfoDTO);
         tblEmployeeInfo.refresh();
@@ -138,6 +138,23 @@ public class EmployeeInfoController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        EmployeeInfoDTO selectedEmployee = tblEmployeeInfo.getSelectionModel().getSelectedItem();
+
+        if (selectedEmployee != null){
+            employeeInfoDTOS.remove(selectedEmployee);
+            tblEmployeeInfo.refresh();
+        }
+
+        txtEmployeeID.setText("");
+        txtName.setText("");
+        txtNIC.setText("");
+        txtDOB.setText("");
+        txtPosition.setText("");
+        txtSalary.setText("");
+        txtContactNumber.setText("");
+        txtAddress.setText("");
+        txtJoinedDate.setText("");
+        txtStatus.setText("");
 
     }
 
