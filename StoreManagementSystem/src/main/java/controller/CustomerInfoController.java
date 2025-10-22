@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import model.dto.CustomerInfoDTO;
 
 import java.net.URL;
@@ -92,7 +93,15 @@ public class CustomerInfoController implements Initializable {
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
-
+        txtCustomerID.setText("");
+        txtTitle.setText("");
+        txtName.setText("");
+        txtDOB.setText("");
+        txtSalary.setText("");
+        txtAddress.setText("");
+        txtCity.setText("");
+        txtProvince.setText("");
+        txtPostalCode.setText("");
     }
 
     @FXML
@@ -107,6 +116,30 @@ public class CustomerInfoController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        colCustomerID.setCellValueFactory(new PropertyValueFactory<>("cusID"));
+        colTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colDOB.setCellValueFactory(new PropertyValueFactory<>("dob"));
+        colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        colCity.setCellValueFactory(new PropertyValueFactory<>("city"));
+        colProvince.setCellValueFactory(new PropertyValueFactory<>("province"));
+        colPostalCode.setCellValueFactory(new PropertyValueFactory<>("postalCode"));
+
+        tblCustomerInfo.setItems(customerInfoDTOS);
+
+        tblCustomerInfo.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            txtCustomerID.setText(newValue.getCusID());
+            txtTitle.setText(newValue.getTitle());
+            txtName.setText(newValue.getName());
+            txtDOB.setText(newValue.getDob());
+            txtSalary.setText(String.valueOf(newValue.getSalary()));
+            txtAddress.setText(newValue.getAddress());
+            txtCity.setText(newValue.getCity());
+            txtProvince.setText(newValue.getProvince());
+            txtPostalCode.setText(newValue.getPostalCode());
+        });
 
     }
 }
