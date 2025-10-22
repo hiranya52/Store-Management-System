@@ -88,6 +88,31 @@ public class SupplierInfoController implements Initializable {
 
     @FXML
     void btnAddOnAction(ActionEvent event) {
+        String supplierID = txtSupplierID.getText();
+        String name = txtName.getText();
+        String companyName = txtCompanyName.getText();
+        String address = txtAddress.getText();
+        String city = txtCity.getText();
+        String province = txtProvince.getText();
+        String postalCode = txtPostalCode.getText();
+        String phone = txtPhone.getText();
+        String email = txtEmail.getText();
+
+        SupplierInfoDTO supplierInfoDTO = new SupplierInfoDTO(supplierID, name, companyName, address, city, province, postalCode, phone, email);
+
+        supplierInfoDTOS.add(supplierInfoDTO);
+        tblSupplierInfo.refresh();
+
+        txtSupplierID.setText("");
+        txtName.setText("");
+        txtCompanyName.setText("");
+        txtAddress.setText("");
+        txtCity.setText("");
+        txtProvince.setText("");
+        txtPostalCode.setText("");
+        txtPhone.setText("");
+        txtEmail.setText("");
+
 
     }
 
