@@ -36,38 +36,38 @@
             <Font name="Arial Bold" size="34.0" />
          </font>
       </Label>
-      <TextField layoutX="252.0" layoutY="169.0" prefHeight="35.0" prefWidth="240.0" promptText="Item Code" />
-      <TextField layoutX="530.0" layoutY="168.0" prefHeight="35.0" prefWidth="240.0" promptText="Description" />
-      <TextField layoutX="803.0" layoutY="167.0" prefHeight="35.0" prefWidth="240.0" promptText="Category" />
-      <TextField layoutX="384.0" layoutY="225.0" prefHeight="35.0" prefWidth="240.0" promptText="Qty on hand" />
-      <TextField layoutX="671.0" layoutY="224.0" prefHeight="35.0" prefWidth="240.0" promptText="Unit Price" />
-      <Button layoutX="378.0" layoutY="301.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #321d12;" text="Add" textFill="WHITE">
+      <TextField fx:id="txtItemCode" layoutX="252.0" layoutY="169.0" prefHeight="35.0" prefWidth="240.0" promptText="Item Code" />
+      <TextField fx:id="txtDescription" layoutX="530.0" layoutY="168.0" prefHeight="35.0" prefWidth="240.0" promptText="Description" />
+      <TextField fx:id="txtCategory" layoutX="803.0" layoutY="167.0" prefHeight="35.0" prefWidth="240.0" promptText="Category" />
+      <TextField fx:id="txtQtyOnHand" layoutX="384.0" layoutY="225.0" prefHeight="35.0" prefWidth="240.0" promptText="Qty on hand" />
+      <TextField fx:id="txtUnitPrice" layoutX="671.0" layoutY="224.0" prefHeight="35.0" prefWidth="240.0" promptText="Unit Price" />
+      <Button layoutX="378.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #321d12;" text="Add" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="518.0" layoutY="301.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Update" textFill="#321d12">
+      <Button layoutX="518.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Update" textFill="#321d12">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="659.0" layoutY="301.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Delete" textFill="#321d12">
+      <Button layoutX="659.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Delete" textFill="#321d12">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="799.0" layoutY="301.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Clear" textFill="#321d12">
+      <Button layoutX="799.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="110.0" style="-fx-border-color: #321d12;" text="Clear" textFill="#321d12">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Button>
-      <TableView layoutX="96.0" layoutY="378.0" prefHeight="401.0" prefWidth="1118.0" style="-fx-border-color: #321d12;">
+      <TableView fx:id="tblItemInfo" layoutX="96.0" layoutY="378.0" prefHeight="401.0" prefWidth="1118.0" style="-fx-border-color: #321d12;">
          <columns>
-            <TableColumn prefWidth="161.0282745361328" style="-fx-border-color: #321d12;" text="Item Code" />
-            <TableColumn prefWidth="362.47166442871094" style="-fx-border-color: #321d12;" text="Description" />
-            <TableColumn prefWidth="245.37863159179688" style="-fx-border-color: #321d12;" text="Category" />
-            <TableColumn prefWidth="140.13818359375" style="-fx-border-color: #321d12;" text="Oty on hand" />
-            <TableColumn prefWidth="208.8922119140625" style="-fx-border-color: #321d12;" text="Unit Price" />
+            <TableColumn fx:id="colItemCode" prefWidth="161.0282745361328" style="-fx-border-color: #321d12;" text="Item Code" />
+            <TableColumn fx:id="colDescription" prefWidth="362.47166442871094" style="-fx-border-color: #321d12;" text="Description" />
+            <TableColumn fx:id="colCategory" prefWidth="245.37863159179688" style="-fx-border-color: #321d12;" text="Category" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="140.13818359375" style="-fx-border-color: #321d12;" text="Oty on hand" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="208.8922119140625" style="-fx-border-color: #321d12;" text="Unit Price" />
          </columns>
       </TableView>
    </children>
